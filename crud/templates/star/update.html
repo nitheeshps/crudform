@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{%extends 'star/base.html'%}
+{%block child_block%}
+
+<div class="container" align="center">
+    <h2>REWRITE YOUR FORM</h2>
+    <form method="POST">
+        {%csrf_token%}
+        Name:<input type="text" name='Name' value="{{student.Name}}"><br>
+        Age:<input type="text" name='Age' value="{{student.Age}}"><br>
+        Dep:<input type="text" name='Dep' value="{{student.Dep}}"><br>
+        cgpa:<input type="text" name='cgpa' value="{{student.cgpa}}"><br>
+        project:<input type="text" name='project' value="{{student.project}}"><br>
+        clubs:<input type="text" name='clubs' value="{{student.clubs}}"><br>
+        <input type="submit" value = "Update Record" name=''>
+
+    </form>
+</div>
+
+
+{%endblock%}

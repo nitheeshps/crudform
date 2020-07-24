@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{%extends 'star/base.html'%}
+{%block child_block%}
+<div class="container" align="center">
+    <h2>INFORMATION OF STUDENTS</h2>
+    <table border="1"></table>
+        <thead>
+            <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Dep</th>
+            <th>cgpa</th>
+            <th>project</th>
+            <th>clubs</th>
+            <th>Actions</th>
+
+            </tr>
+        </thead>
+        {% for student in students%}
+        <tr>
+            <td>{{student.Name}}</td>
+            <td>{{student.Age}}</td>
+            <td>{{student.Dep}}</td>
+            <td>{{student.cgpa}}</td>
+            <td>{{student.project}}</td>
+            <td>{{student.clubs}}</td>
+            <td><a href="/delete/{{student.id}}">Delete/</a><a href="/Update/{{student.id}}" >Update</a></td>
+
+        </tr>
+        {%endfor%}
+    </table>
+</div>
+{%endblock%}

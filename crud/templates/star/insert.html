@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{%extends 'star/base.html' %}
+{% block child_block %}
+<div class="container" align="center">
+
+<h2>RECRUITEMENT FORM</h2>
+<form method="POST">
+    {{form.as_p}}
+    {%csrf_token%}
+    <input type="submit" value="Submit" class="btn btn-primary btn-lg">
+
+
+
+</form>
+<a href="/show" class="btn btn-primary btn-lg">VIEW DETAILS</a>
+</div>
+{%endblock%}
